@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "repo": "hananzlot/ibpo-stage-fixture",
+  "product_name": "ibpo stage acceptance fixture",
+  "queue_path": "scratch/queue.md",
+  "rules_files": ["CLAUDE.md"],
+  "worktree": { "parent_dir": "..", "prefix": "ibpo-stage-fixture", "branch_kinds": ["fix", "feat", "chore"] },
+  "bootstrap_files": [],
+  "checks": [
+    { "id": "noop", "cmd": "true", "timeout_s": 60, "trigger": "always" }
+  ],
+  "legs": [],
+  "evidence_root": "docs/initiatives",
+  "staging": {
+    "strategy": "pr-only",
+    "branch_prefix": "staging/",
+    "production_ref": "",
+    "main_ref": "origin/main"
+  }
+}
